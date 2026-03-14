@@ -1,5 +1,5 @@
 def letter_number(num):
-    print(num, end="")
+    print(num, end="") # end выводит цифры в строчку
 
 
 letter_number(8)
