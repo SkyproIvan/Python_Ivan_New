@@ -16,5 +16,4 @@ Old_button = driver.find_element(By.CSS_SELECTOR, "#updatingButton").click()
 txt = driver.find_element(By.CSS_SELECTOR, "#updatingButton").text
 
 print(txt)
-sleep(3)
 driver.quit()

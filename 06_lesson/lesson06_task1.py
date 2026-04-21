@@ -16,5 +16,4 @@ txt = driver.find_element(By.CSS_SELECTOR, "p.bg-success").text
 
 print(txt)
 
-sleep(5)
 driver.quit()
