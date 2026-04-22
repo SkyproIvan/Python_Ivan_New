@@ -7,7 +7,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 
 div = WebDriverWait(driver, 20).until(
@@ -15,5 +14,4 @@ div = WebDriverWait(driver, 20).until(
    )
 
 print(div.get_attribute("src"))
-
 driver.quit()
