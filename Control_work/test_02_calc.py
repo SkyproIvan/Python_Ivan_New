@@ -7,13 +7,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 @pytest.fixture
 def browser():
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-    yield driver
-    driver.quit()
-
+   driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+   yield driver
+   driver.quit()
 
 def test_2(browser):
     browser.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
@@ -24,17 +22,14 @@ def test_2(browser):
     element.clear()
     element.send_keys("45")
 
-    button_7 = wait.until(
-        EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-primary' and text() = '7']")))
+
+    button_7 = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-primary' and text() = '7']")))
     button_7.click()
-    button_plus = wait.until(
-        EC.element_to_be_clickable((By.XPATH, "//span[@class = 'operator btn btn-outline-success' and text() = '+']")))
+    button_plus = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class = 'operator btn btn-outline-success' and text() = '+']")))
     button_plus.click()
-    button_8 = wait.until(
-        EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-primary' and text() = '8']")))
+    button_8 = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-primary' and text() = '8']")))
     button_8.click()
-    button_res = wait.until(
-        EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-warning' and text() = '=']")))
+    button_res = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[@class = 'btn btn-outline-warning' and text() = '=']")))
     button_res.click()
 
     try:
@@ -58,7 +53,7 @@ def test_2(browser):
 
 
 
-
+    
 
 
 
