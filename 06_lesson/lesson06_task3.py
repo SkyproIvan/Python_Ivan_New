@@ -13,4 +13,5 @@ div = WebDriverWait(driver, 20).until(
    )
 
 print(div.get_attribute("src"))
+
 driver.quit()
