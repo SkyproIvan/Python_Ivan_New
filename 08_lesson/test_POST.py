@@ -7,8 +7,8 @@ base_url = "https://ru.yougile.com/api-v2/"
 def test_add_token():
 
     token = {
-        "login": "skypro_ivan@mail.ru",
-        "password": "Zreijdrf_2013",
+        "login": "---",
+        "password": "---",
         "companyId": "c13fdb15-670c-4a71-a234-3cf0a8f8eed3"
         }
     auth = requests.post(base_url + 'auth/keys', json=token)
